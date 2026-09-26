@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>royal team company</title>
+<style>
+body{font-family:Arial,sans-serif;background:#f1efff;margin:0;padding:20px}
+.form{max-width:650px;margin:auto;background:white;border-radius:14px;overflow:hidden;box-shadow:0 2px 12px #0002}
+.header{border-top:8px solid #5b45df;padding:25px}
+h1{margin:0;font-size:28px;font-weight:500}
+.field{padding:20px 25px;border-top:1px solid #ddd}
+label{display:block;font-size:17px;margin-bottom:10px}
+input[type=text],input[type=tel],input[type=date],input[type=number]{width:100%;padding:12px 8px;border:0;border-bottom:1px solid #aaa;font-size:16px;outline:none}
+input:focus{border-bottom:2px solid #5b45df}
+.required{color:#d93025}
+.tick{display:flex;gap:25px;align-items:center}
+.tick label{display:flex;align-items:center;gap:8px;margin:5px 0}
+.tick input{width:18px;height:18px}
+button{margin:20px 25px 25px;background:#5b45df;color:white;border:0;padding:13px 30px;border-radius:6px;font-size:16px}
+.success{display:none;margin:0 25px 25px;padding:14px;background:#e8f5e9;color:#176b2c;border-radius:6px}
+</style>
+</head>
+<body>
+<form class="form" id="form">
+<div class="header">
+<h1> Royal team company</h1>
+</div>
+
+<div class="field">
+<label>Candidate Name <span class="required">*</span></label>
+<input type="text" name="candidate_name" required placeholder="Your answer">
+</div>
+
+<div class="field">
+<label>Mobile Number <span class="required">*</span></label>
+<input type="tel" name="mobile" required pattern="[0-9]{10}" maxlength="10" placeholder="10-digit mobile number">
+</div>
+
+<div class="field">
+<label>Date <span class="required">*</span></label>
+<input type="date" name="date" required>
+</div>
+
+<div class="field">
+<label>Date of Birth <span class="required">*</span></label>
+<input type="date" name="dob" required>
+</div>
+
+<div class="field">
+<label>Age <span class="required">*</span></label>
+<input type="number" name="age" required min="1" max="100" placeholder="Enter age">
+</div>
+
+<div class="field">
+<label>City <span class="required">*</span></label>
+<input type="text" name="city" required placeholder="Enter city">
+</div>
+
+<div class="field">
+    <!--Sahi ka tick-->
+<label>Sahi ka Tick <span class="required">*</span></label>
+<div class="tick">
+<label><input type="radio" name="tick" value="Yes" required> ✓ Yes</label>
+<label><input type="radio" name="tick" value="No"> ✕ No</label>
+</div>
+</div>
+
+<button type="submit">Submit</button>
+<div class="success" id="success">Form submitted successfully.</div>
+</form>
+
+<script>
+document.getElementById("form").addEventListener("submit",function(e){
+e.preventDefault();
+document.getElementById("success").style.display="block";
+});
+</script>
+</body>
+</html>"""
+
+out.write_text(html, encoding="utf-8")
+print(f"Created: {out}")
+</body>
+</html>
